@@ -7,7 +7,6 @@ import { FcGoogle } from 'react-icons/fc'
 import {  faEye, faEyeSlash, faCheck } from '@fortawesome/free-solid-svg-icons';
 
 import { NavLink, useNavigate } from 'react-router-dom';
-import './Personal_info'
 
 import './Register.css'
 import { createUserWithEmailAndPassword } from "firebase/auth";
