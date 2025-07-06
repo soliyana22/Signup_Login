@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { X, Info } from 'lucide-react';
-import './personal_info.css';
+import './Personal_info.css';
 
 const Personal_info = () => {
   const [fullName, setFullName] = useState('');
