@@ -1,0 +1,338 @@
+/* Dashboard.css */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background-color: #f9f9fb;
+  color: #111827;
+}
+
+.dashboard-container {
+  display: flex;
+  min-height: 100vh;
+   border: 1px solid #e5e7eb;
+  border-radius: 20px;
+}
+
+/* Sidebar */
+
+.dashboard-sidebar {
+  background: #ffffff;
+  width: 250px;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  
+  
+}
+
+.dashboard-logo {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.dashboard-menu a {
+  display: block;
+  color: #6b7280;
+  margin: 1rem 0;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  text-align: left;
+}
+.inner_nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+.dashboard-menu a.active {
+  background-color: #4f46e5;
+  color: white;
+}
+
+.dashboard-menu a:hover {
+  background-color: #eef2ff;
+  color: #4f46e5;
+}
+
+.dashboard-upgrade {
+  margin-top: auto;
+  background: linear-gradient(to right, #b05bd7, #6366f1);
+  padding: 1rem;
+  border-radius: 1rem;
+  text-align: center;
+  color: white;
+  font-size: 0.8rem;
+}
+
+.dashboard-upgrade button {
+  background-color: #ffffff;
+  color: #4f46e5;
+  border: none;
+  border-radius:20px;
+  width:150px;
+  height:30px;
+  /* padding: 0.25rem 0.5rem; */
+  margin-top: 0.5rem;
+  text-align: center;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.dashboard-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.dashboard-profile img {
+  border-radius: 50%;
+  width: 42px;
+    height: 42px;
+    top: 1080px;
+    left: 28px;
+
+
+}
+
+.dashboard-profile span {
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+.dashboard-profile small {
+  color: #6b7280;
+}
+
+/* Main content */
+
+.dashboard-content {
+  flex: 1;
+  padding: 2rem;
+  background-color: rgb(242, 243, 245);
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dashboard-search {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* space nicely between icon + input */
+  background: white;
+  width: 280px;
+  height: 50px;
+  border-radius: 20px;
+  padding: 0 10px;
+
+  .dashboard-content {
+  flex: 1;
+  padding: 2rem;
+  background-color: rgb(242, 243, 245);
+}
+
+}
+
+.dashboard-search input {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 15px;
+  color: gray;
+  flex: 1; /* grow to fill space */
+  margin: 0; /* remove margin-bottom! */
+}
+
+
+.dashboard-metrics {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.metric-card {
+  background: white;
+  border-radius: 1rem;
+  flex: 1;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.users_logo{
+  background-color: #D3FFE7;
+  color:#00AC4F;
+  border-radius: 50px;
+  width:50px;
+  height:50px;
+ padding-top: 1rem;
+  
+}
+.table-search {
+  position: relative;
+  width: 280px;
+  height: 50px;
+  background: white;
+  border-radius: 20px;
+  display: flex;
+   border: 1px solid transparent;
+}
+
+.table-search input {
+  width: 20rem;
+
+  height: 2.5rem;
+  border: 1px transparent;
+  outline: none;
+  font-size: 16px;
+ 
+  border-radius: 20px;
+  background-color: #F9FBFF;
+}
+
+.search-icon {
+  position: absolute;
+  text-align: center;
+ 
+  left: 12px;
+ 
+}
+
+.metric-card p {
+  margin: 0;
+  font-weight: 500;
+  color: #6b7280;
+}
+
+.metric-card h2 {
+  margin: 0.3rem 0;
+}
+
+.metric-up {
+  color: #16a34a;
+}
+
+.metric-down {
+  color: #dc2626;
+}
+.search_cust{
+  display:flex;
+  padding-top:80px;
+}
+.search_customer{
+  position: relative;
+}
+.dashboard-table {
+  margin-top: 2rem;
+  background: white;
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.table-header input {
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+}
+
+.table-header select {
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  background-color: rgb(251, 250, 250);
+  color:black;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+thead {
+  background: #f9fafb;
+}
+
+th, td {
+  text-align: left;
+  padding: 0.75rem;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 0.9rem;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.status-badge.active {
+  background-color: #dcfce7;
+  border-radius: 10px;
+  padding:0.5rem;
+  color: #16a34a;
+  border:1px solid #00B087;
+}
+
+.status-badge.inactive {
+  background-color: #fee2e2;
+  color: #dc2626;
+  border:1px solid #DF0404;
+  border-radius: 10px;
+  padding:0.5rem;
+  
+}
+
+.table-footer {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.5rem;
+  color: #6b7280;
+}
+
+.pagination button.Inactive {
+  border: 2px solid #EEEEEE;
+  background: #F5F5F5;
+  width:40px;
+  height:40px;
+  margin: 0 0.2rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  background-color:#F5F5F5;
+  color:black;
+
+
+}
+ .pagination button.active {
+  border: 1px solid transparent;
+  background: #4f46e5;
+  color: white;
+   width:40px;
+  height:40px;
+} 
+.table-footer .table_ft_text{
+  font-size: 100px;
+}

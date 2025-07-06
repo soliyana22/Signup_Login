@@ -1,0 +1,229 @@
+.personal-info-container {
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 640px;
+  padding: 24px;
+}
+
+@media (min-width: 640px) {
+  .personal-info-container {
+    padding: 32px;
+  }
+}
+
+.personal-info-header {
+  display: flex;
+  justify-content: space-between;  /* spread left/right */
+  align-items: center;             /* keep items on same horizontal line */
+  margin-bottom: 24px;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 16px;
+  white-space: nowrap;
+}
+
+
+
+
+.personal-info-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: black;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  margin-right: 2rem;
+
+}
+
+.personal-info-progress {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.personal-info-step {
+  color: #6BC62D;
+  font-size: 1.125rem;
+  font-weight: bold;
+}
+
+.personal-info-close {
+  background: transparent;
+  color: #6b7280;
+  border: none;
+  padding: 4px;
+  cursor: pointer;
+  margin-left:5rem;
+ 
+}
+
+.personal-info-close:hover {
+  color: #374151;
+  background-color: #f3f4f6;
+}
+.Gender_radio{
+    display:flex;
+}
+.male_radio{
+    font-size: 1rem;
+}
+.personal-info-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.personal-info-input {
+  width: 100%;
+  padding: 6px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  transition: all 0.3s;
+  background-color: white;
+}
+
+.personal-info-input:focus {
+  border-color: #8b5cf6;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(139,92,246,0.4);
+}
+
+.personal-info-label {
+  color: #374151;
+  margin-bottom: 8px;
+}
+
+.personal-info-gender {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.personal-info-radio-label {
+  display: flex;
+  align-items: center;
+  gap: 0px;
+  cursor: pointer;
+  color: #374151;
+}
+.personal-info-radio-label {
+  position: relative;
+  padding-left: 24px;
+  cursor: pointer;
+}
+
+.personal-info-radio-label input[type="radio"] {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20px;
+  height: 20px;
+
+}
+
+.personal-info-radio-label span::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  
+  background-color: rgb(236, 206, 211);
+}
+
+.personal-info-radio-label input[type="radio"]:checked + span::before {
+  background-color:white;
+  box-shadow: inset 0 0 0 4px white;
+  border: 4px solid #8b5cf6;
+}
+
+.personal-info-note {
+  display: flex;
+  align-items: center;
+  font-size: 0.875rem;
+  color: #6b7280;
+  background-color: #f5f3ff;
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.personal-info-icon {
+  color: #8b5cf6;
+  margin-right: 8px;
+
+}
+
+.personal-info-phone {
+  display: flex;
+  gap: 8px;
+}
+
+.personal-info-country select {
+  width: 96px;
+  padding: 20px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background-color: white;
+  color:black;
+  margin-top:1rem;
+  text-align: center;
+}
+.personal_info_number{
+    background-color: #e5e7eb;
+}
+.personal-info-birthday {
+  position: relative;
+}
+
+.personal-info-birthday input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+}
+
+.personal-info-calendar {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #9ca3af;
+}
+
+.personal-info-subtext {
+  color: #6b7280;
+  font-size: 0.875rem;
+  margin-top: 4px;
+}
+
+.personal-info-save {
+  margin-top: 32px;
+}
+
+.personal-info-button {
+  width: 100%;
+  background-color: #5932EA;
+  color: white;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  font-size: 1.125rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.personal-info-button:hover {
+  background-color: #7c3aed;
+}
+
+.personal-info-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(139,92,246,0.4);
+}
