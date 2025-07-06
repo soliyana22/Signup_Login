@@ -1,13 +1,13 @@
 import React from "react";
 import "./App.css"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Register from "./pages/Register/Register";
-import Login from './pages/Login/Login'
 import Personal_info from "./pages/Register/Personal_info";
 import { Dashboard } from "./pages/Dashboard/Dashboard";
 import Add_address from "./pages/Register/Add_address";
 import Manual from "./pages/Register/manual";
 import Final from "./pages/Register/final";
+import Register from "./pages/Register/Register";
+import Login from "./pages/Login/Login"
 
 function App() {
   return (
