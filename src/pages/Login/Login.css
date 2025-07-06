@@ -10,7 +10,7 @@
     border:1px solid rgb(214, 212, 212);
     border-radius: 20px;
     width:480px;
-    max-width: 700px;;
+    max-width: 700px;
     height:38rem;
     min-height: 100px;
 }
@@ -60,11 +60,6 @@ input {
     gap:5px;
     border-radius: 10px;
     margin-top:1rem;
-}
-.under_password
-{
-    color: gray;
-    margin-left: 1rem;
 }
 input[type="checkbox"] {
   width: 18px;
@@ -125,6 +120,8 @@ height: 56px;
   color: #333; 
   font-size: 1.1em; 
   gap: 10px; 
+  margin-top: 1rem;
+  margin-left:1rem;
 }
 
 
@@ -169,4 +166,39 @@ height: 56px;
 
 .custom-checkbox-container:hover .custom-checkbox {
   background-color: #f0dce2; 
+}
+.active-link {
+  color:black;
+  text-decoration: underline pink 2px;
+  text-underline-offset: 4px;
+  font-weight: bold;
+}
+
+.inactive-link {
+  color: black;
+  text-decoration: none;
+}
+.eye-icon {
+  position: absolute;
+  right: 20px;
+  top: 35px;
+  cursor: pointer;
+  color: gray;
+}
+
+.check-icon {
+  position: absolute;
+  right: 80px;
+  top: 35px;
+  color: green;
+}
+
+.password-group {
+  position: relative;
+}
+.faEye{
+  margin-right:2rem;
+}
+.password{
+  background-color: #95a5a6;
 }

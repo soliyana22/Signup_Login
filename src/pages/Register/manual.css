@@ -1,0 +1,91 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.add-address-container {
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 640px;
+  padding: 24px;
+}
+
+.add-address-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 16px;
+}
+
+.add-address-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: black;
+}
+
+.add-address-step {
+  color: #6BC62D;
+  font-size: 1.125rem;
+  font-weight: bold;
+}
+
+.add-address-close {
+  background: transparent;
+  color: #6b7280;
+  border: none;
+  cursor: pointer;
+}
+.add-address-close:hover {
+  color: #374151;
+  background-color: #f3f4f6;
+}
+.search-address-input .specific{
+  display: inline;
+}
+.search-address {
+  margin-top: 2rem;
+  gap:4px;
+}
+.search-address-wrapper {
+  position: relative;
+  
+}
+.search-address-input {
+  width: 100%;
+  padding: 10px 10px 10px 40px;
+  height: 65px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: white;
+  color:black;
+  margin-top: 1rem;
+}
+.search-address-text {
+  color: gray;
+  font-size: small;
+  margin-top: 4px;
+  text-align: left;
+}
+.specific{
+  display:flex;
+  gap:20px;
+}
+.save_btn{
+  width:100%;
+  background-color: #5932EA;
+  gap:8px;
+  margin-top: 8rem;
+  padding-top:2.5rem;
+  border-radius:20px;
+  text-align:center;
+  font-size:1.25rem;
+  font-weight: bold;
+  justify-content: center;
+  align-items:center;
+}

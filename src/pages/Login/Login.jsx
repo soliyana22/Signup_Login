@@ -8,9 +8,9 @@ import {  faEye, faEyeSlash, faCheck } from '@fortawesome/free-solid-svg-icons';
 
 import { NavLink, useNavigate } from 'react-router-dom';
 import { signInWithEmailAndPassword } from "firebase/auth";
-import { auth } from "../util/firebase";
+import { auth } from "../../util/firebase"
 
-import'./Register/Register.css'
+import'./Login.css'
 const Login = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
