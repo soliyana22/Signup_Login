@@ -3,7 +3,7 @@ import { X, Info } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 
-import './personal_info.css';
+import './Personal_info.css'
 
 const Personal_info = () => {
   const navigate = useNavigate();
