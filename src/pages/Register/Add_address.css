@@ -8,33 +8,44 @@
   background-color: white;
   border-radius: 16px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  width: 100%;
-  max-width: 640px;
+  width: 80%;
+  max-width: 500px;
   padding: 24px;
+  margin: 0 auto;
 }
 
 .add-address-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
+  gap: 10px;
   margin-bottom: 24px;
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom: 1px solid transparent;
   padding-bottom: 16px;
+  position: relative;
 }
 
 .add-address-title {
   font-size: 1.2rem;
   font-weight: bold;
   color: black;
+  flex: 1;
+  text-align: center;
 }
 
 .add-address-step {
   color: #6BC62D;
   font-size: 1.125rem;
   font-weight: bold;
+  flex-shrink: 0;
 }
 
 .add-address-close {
+  
+  left: 0%;
+  top: 40%;
+  transform: translateY(-20%);
   background: transparent;
   color: #6b7280;
   border: none;
@@ -46,57 +57,79 @@
 }
 
 .search-address {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 .search-address-wrapper {
   position: relative;
 }
 .search-icon {
   position: absolute;
-  left: 10px;
-  top: 50%;
+  left: 0px;
+  top: 60%;
   transform: translateY(-50%);
   color: #6b7280;
 }
 .search-address-input {
   width: 100%;
-  padding: 10px 10px 10px 40px;
+  padding:10px;
   height: 50px;
   border: 1px solid #d1d5db;
   border-radius: 8px;
   font-size: 1rem;
   background-color: white;
-  color:black;
+  color: black;
 }
 .search-address-text {
   color: gray;
   font-size: small;
-  margin-top: 4px;
+
   text-align: left;
 }
 
-.address-options {
+/* .address-options {
   display: flex;
-  gap: 1rem;
-  margin-top: 1.5rem;
+  flex-direction: column;
+  gap: 0.5rem;
+  
 }
 .options {
-  border: 2px solid lightpink;
+  border: 1px solid lightpink;
   color: #5932EA;
   background-color: white;
-  border-radius: 17px;
-  padding: 0.5rem 1rem;
+  border-radius: 12px;
   font-weight: bold;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  justify-content: center;
+  height: 40px;
+  padding: 0 12px;
+  margin-bottom: 7rem;
+} */
+ .address-options {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; /* consistent vertical spacing */
+  margin-top: 1rem;
+}
+.options {
+  border: 1px solid lightpink;
+  color: #5932EA;
+  background-color: white;
+  border-radius: 12px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  padding: 0 12px;
+  margin-bottom: 0; /* remove giant margin */
 }
 .options-icon {
   color: #5932EA;
 }
 
 .share-address {
-  margin-top: 4rem;
+  margin-top: 2rem;
 }
 .share-address h2 {
   font-size: 1.1rem;
@@ -114,4 +147,20 @@
 }
 .share-icon {
   color: #4b5563;
+}
+
+/* 🌟 RESPONSIVENESS */
+
+@media (min-width: 768px) {
+  .address-options {
+    flex-direction: row;
+  }
+  .add-address-container {
+    padding: 32px;
+  }
+}
+@media (min-width: 768px) {
+  .share-address {
+    margin-top: 7rem;
+  }
 }

@@ -12,30 +12,63 @@ import './Personal_info'
 import './Register.css'
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../util/firebase"
-
-
-
-
-
 const Register = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
+const isPasswordValid =
+  password.length >= 8 &&
+  /[a-z]/.test(password) &&
+  /[A-Z]/.test(password) &&
+  /\d/.test(password) &&
+  /[!@#$%^&*]/.test(password);
 
-  const isEmailValid = email.includes("@") && email.includes(".");
-  const isPasswordValid = password.length >= 8;
+ const isEmailValid = email.includes("@") && email.includes(".");
 
-  const handleSubmit = async (e) => {
+const handleSubmit = async (e) => {
   e.preventDefault();
+
+  // password checks
+  if (password.length < 8) {
+    alert("Password must be at least 8 characters long.");
+    return;
+  }
+
+  if (!/[a-z]/.test(password)) {
+    alert("Password must contain at least one lowercase letter.");
+    return;
+  }
+
+  if (!/[A-Z]/.test(password)) {
+    alert("Password must contain at least one uppercase letter.");
+    return;
+  }
+
+  if (!/\d/.test(password)) {
+    alert("Password must contain at least one number.");
+    return;
+  }
+
+  if (!/[!@#$%^&*]/.test(password)) {
+    alert("Password must contain at least one special character (!@#$%^&*).");
+    return;
+  }
+
+  if (!isEmailValid) {
+    alert("Invalid email address.");
+    return;
+  }
+
+  
   try {
     await createUserWithEmailAndPassword(auth, email, password);
-    navigate("/personalinfo"); // success
+    navigate("/personalinfo"); 
   } catch (err) {
     console.error(err);
     alert("Signup failed: " + err.message);
   }
-}
+};
 
   return (
     <div className='register_container'>
@@ -107,7 +140,7 @@ const Register = () => {
             Send me news and promotions
           </label>
         </form>
-        <div>
+        <div className='bottom_text'>
           <p>By continuing I agree with the <a>Terms & Conditions,<br/>Privacy Policy</a></p>
         </div>
       </div>

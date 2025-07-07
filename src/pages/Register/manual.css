@@ -1,91 +1,241 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
-.add-address-container {
-  background-color: white;
-  border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  width: 100%;
-  max-width: 640px;
-  padding: 24px;
-}
+        body {
+            background-color: #f5f7fa;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
 
-.add-address-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 24px;
-  border-bottom: 1px solid #e5e7eb;
-  padding-bottom: 16px;
-}
+        .add-address-container {
+            background-color: white;
+            border-radius: 16px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 640px;
+            padding: 24px;
+        }
 
-.add-address-title {
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: black;
-}
+        .add-address-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+            border-bottom: 1px solid #e5e7eb;
+            padding-bottom: 16px;
+            position: relative;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
 
-.add-address-step {
-  color: #6BC62D;
-  font-size: 1.125rem;
-  font-weight: bold;
-}
+        .add-address-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: black;
+            order: 1;
+            flex: 1;
+        }
 
-.add-address-close {
-  background: transparent;
-  color: #6b7280;
-  border: none;
-  cursor: pointer;
-}
-.add-address-close:hover {
-  color: #374151;
-  background-color: #f3f4f6;
-}
-.search-address-input .specific{
-  display: inline;
-}
-.search-address {
-  margin-top: 2rem;
-  gap:4px;
-}
-.search-address-wrapper {
+        .add-address-step {
+            color: #6BC62D;
+            font-size: 1.125rem;
+            font-weight: bold;
+            order: 2;
+        }
+
+        .add-address-close {
+            background: transparent;
+            color: black;
+            border: none;
+            cursor: pointer;
+            order: 3;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+
+        .add-address-close:hover {
+            color: #374151;
+            background-color: #f3f4f6;
+        }
+
+        .search-address {
+            margin-top: 2rem;
+        }
+
+        .search-address-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .search-address-input {
+            width: 100%;
+            padding: 10px 16px;
+            height: 55px;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            font-size: 1rem;
+            background-color: white;
+            color: black;
+            transition: border-color 0.2s;
+        }
+        .search-address-input-label{
+          position: absolute;
+         
+        }
+
+        .search-address-input:focus {
+            outline: none;
+            border-color: #5932EA;
+        }
+
+        .specific {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        /* Save button styles */
+        .save_btn {
+            width: 100%;
+            background-color: #5932EA;
+            color: white;
+            margin-top: 3rem;
+            padding: 14px 0;
+            border-radius: 20px;
+            text-align: center;
+            font-size: 1.25rem;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            transition: background-color 0.3s;
+        }
+
+        .save_btn:hover {
+            background-color: #4025b5;
+        }
+        .input-group {
   position: relative;
-  
 }
+
 .search-address-input {
   width: 100%;
-  padding: 10px 10px 10px 40px;
-  height: 65px;
+  padding: 20px 16px 10px 16px;  /* extra top padding for label */
+  height: 55px;
   border: 1px solid #d1d5db;
   border-radius: 8px;
   font-size: 1rem;
   background-color: white;
-  color:black;
-  margin-top: 1rem;
+  color: black;
 }
-.search-address-text {
-  color: gray;
-  font-size: small;
-  margin-top: 4px;
-  text-align: left;
+
+.floating-label {
+  position: absolute;
+  left: 16px;
+  top: 16px;
+  color: #6b7280;
+  font-size: 1rem;
+  pointer-events: none;
+  transition: all 0.2s ease;
+  
 }
-.specific{
-  display:flex;
-  gap:20px;
+.floating-label .first{
+left:0;
 }
-.save_btn{
-  width:100%;
-  background-color: #5932EA;
-  gap:8px;
-  margin-top: 8rem;
-  padding-top:2.5rem;
-  border-radius:20px;
-  text-align:center;
-  font-size:1.25rem;
-  font-weight: bold;
-  justify-content: center;
-  align-items:center;
+.floating-label .second{
+ right:0
 }
+/* When input has focus or something typed inside */
+.search-address-input:focus + .floating-label,
+.search-address-input:not(:placeholder-shown) + .floating-label {
+  top: 4px;
+  left: 12px;
+  font-size: 0.75rem;
+  color: #5932EA;
+  background: white;
+  padding: 0 4px;
+}
+
+
+        /* 🌟 RESPONSIVE MEDIA QUERIES */
+        @media (min-width: 480px) {
+            .add-address-header {
+                flex-wrap: nowrap;
+            }
+            
+            .add-address-title {
+                order: 1;
+                flex: none;
+            }
+            
+            .add-address-step {
+                order: 2;
+                margin: 0 12px;
+            }
+            
+            .add-address-close {
+                order: 3;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .specific {
+                flex-direction: row;
+            }
+            
+            .add-address-container {
+                padding: 32px;
+            }
+            
+            .save_btn {
+                margin-top: 4rem;
+            }
+        }
+ @media (max-width: 479px) {
+            .add-address-container {
+                padding: 18px;
+            }
+            
+            .add-address-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px;
+            }
+            
+            .add-address-title {
+                font-size: 1.1rem;
+            }
+            
+            .add-address-step {
+                font-size: 1rem;
+            }
+            
+            .add-address-close {
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+            
+            .search-address-input {
+                height: 50px;
+                font-size: 0.95rem;
+                
+            }
+            
+            .save_btn {
+                font-size: 1.1rem;
+                padding: 12px 0;
+                margin-top: 2.5rem;
+            }
+        }

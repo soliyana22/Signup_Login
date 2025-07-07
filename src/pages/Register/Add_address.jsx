@@ -1,5 +1,5 @@
 import React from 'react'
-import { X, Search, Users, Clock, DollarSign } from 'lucide-react'
+import { X, Search, Users, Clock, DollarSign, MapPin } from 'lucide-react'
 import { useNavigate } from 'react-router-dom';
 
 import './Add_address.css'
@@ -13,15 +13,17 @@ const Add_address = () => {
   return (
     <div className="add-address-container">
       <div className="add-address-header">
+        <div>
         <p className="add-address-title">Add address</p>
+        </div>
+        <div>
         <p className="add-address-step">3 of 3</p>
-        <button
-          className="add-address-close"
-          aria-label="Close"
-          onClick={() => console.log('Close button clicked')}
-        >
-          <X size={20} />
-        </button>
+        </div>
+        <div>
+       
+          <X size={20} className="add-address-close" onClick={() => console.log('Close button clicked')}/>
+     
+        </div>
       </div>
 
       <div className="search-address">
@@ -32,14 +34,14 @@ const Add_address = () => {
             placeholder="Search for address"
             className="search-address-input"
           />
-          <Search size={50} className="search-icon" />
+          <Search size={15} className="search-icon" />
         </div>
         <p className="search-address-text">Your address is not visible to other users</p>
       </div>
 
       <div className="address-options">
         <button className="options">
-          <Users size={16} className="options-icon" />
+          <MapPin size={16} className="options-icon" />
           Use current location
         </button>
         <button className="options" onClick={handleaddress}>

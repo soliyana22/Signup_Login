@@ -168,9 +168,9 @@ height: 56px;
   background-color: #f0dce2; 
 }
 .active-link {
-  color:black;
-  text-decoration: underline pink 2px;
-  text-underline-offset: 4px;
+  color:rgb(53, 53, 53);
+  text-decoration: underline #EF498F 2px;
+  text-underline-offset: 15px;
   font-weight: bold;
 }
 
@@ -201,4 +201,10 @@ height: 56px;
 }
 .password{
   background-color: #95a5a6;
+}
+.bottom_text
+{
+  margin-top: 2rem;
+  margin-left:50px;
+  color:rgb(179, 178, 178);
 }

@@ -7,7 +7,7 @@
 .register_container{
     justify-content: center;
     align-items: center;
-    border:1px solid rgb(214, 212, 212);
+    border:1px solid transparent;
     border-radius: 20px;
     width:480px;
     max-width: 700px;
@@ -30,6 +30,7 @@
   display: flex;
   gap: 1rem;
   margin-left: 2rem;
+  margin-bottom:1.5rem;
 }
 
 .reg_icons {
@@ -52,12 +53,12 @@
 }
 input {
     width: 25rem;
-    height: 56px;
+    height: 50px;
     
     background-color: white;
     color:black;
-    border:1px solid gray;
-    gap:5px;
+
+    gap:3px;
     border-radius: 10px;
     margin-top:1rem;
 }
@@ -98,7 +99,7 @@ height: 56px;
 
 .input-group input:focus {
   outline: none;
-  border: 3px solid #5932EA;
+  border: 2px solid #5932EA;
 }
 
 .input-group label {
@@ -169,7 +170,7 @@ height: 56px;
 }
 .active-link {
   color:black;
-  text-decoration: underline pink 2px;
+  text-decoration: underline #EF498F 2px;
   text-underline-offset: 4px;
   font-weight: bold;
 }
@@ -201,4 +202,10 @@ height: 56px;
 }
 .password{
   background-color: #95a5a6;
+}
+.bottom_text
+{
+  margin-top: 2rem;
+  margin-left:50px;
+  color:rgb(179, 178, 178);
 }

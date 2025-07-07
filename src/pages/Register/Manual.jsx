@@ -15,44 +15,62 @@ const Manual = () => {
       <div className="add-address-header">
         <p className="add-address-title">Add address</p>
         <p className="add-address-step">3 of 3</p>
-        <button
-          className="add-address-close"
+        
+          <X size={20} className="add-address-close"
           aria-label="Close"
-          onClick={() => console.log('Close button clicked')}
-        >
-          <X size={20} />
-        </button>
+          onClick={() => console.log('Close button clicked')}/>
+      
       </div>
        <div className="search-address">
         <div className="search-address-wrapper">
           
-          <input
-            type="text"
-            placeholder="Street adress"
-            className="search-address-input"
+          <div className="input-group">
+              <input
+                type="text"
+                placeholder="319 Bainbridge Street"
+                className="search-address-input"
           />
-          <input
-            type="text"
-            placeholder="Apartment"
-            className="search-address-input"
-          />
-          <input
-            type="text"
-            placeholder="City"
-            className="search-address-input"
-          />
-        <div className='specific'>
-          <input
-            type="text"
-            placeholder="State"
-            className="search-address-input "
+          <label className="floating-label">Street address</label>
+          </div>
 
-          />
-          <input
-            type="text"
-            placeholder="Zip Code"
-            className="search-address-input specific"
-          />
+          <div className="input-group">
+            <input
+              type="text"
+              placeholder=""
+              className="search-address-input"
+            />
+            <label className="floating-label first">Apartment</label>
+            <label className="floating-label second">Optional</label>
+          </div>
+          <div className="input-group">
+            <input
+              type="text"
+              placeholder="New York City"
+              className="search-address-input"
+            />
+      <label className="floating-label">City</label>
+          </div>
+
+          <div className='specific'>
+            <div className="input-group">
+              <input
+                type="text"
+                placeholder="New York "
+                className="search-address-input"
+              />
+          <label className="floating-label">State</label>
+        </div>
+
+          <div className="input-group">
+              <input
+                type="text"
+                placeholder="11233"
+                className="search-address-input specific"
+              />
+         <label className="floating-label">Zip code</label>
+        </div>
+
+         
         </div>
         </div>
        

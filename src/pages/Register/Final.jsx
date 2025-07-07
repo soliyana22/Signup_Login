@@ -1,6 +1,7 @@
 import React from 'react';
 import './final.css';
 import { useNavigate } from 'react-router-dom';
+import{X} from 'lucide-react';
 const Final = () => {
   const navigate = useNavigate();
   const handlesave = () => {
@@ -8,7 +9,9 @@ const Final = () => {
   }
   return (
     <div className="final_container">
-      <button className="final_close">×</button>
+     
+        <X size={20} className="final_close" onClick={()=>(console.log('close button is clicked'))}/>
+    
       <div className="final_image_container">
         <img
           src="/assets/final_image.png"

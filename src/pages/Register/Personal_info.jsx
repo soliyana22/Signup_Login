@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 import { X, Info } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
-
-import './Personal_info.css'
+import './Personal_info.css';
 
 const Personal_info = () => {
   const navigate = useNavigate();
@@ -12,6 +11,11 @@ const Personal_info = () => {
   const [countryCode, setCountryCode] = useState('+598');
   const [phoneNumber, setPhoneNumber] = useState('');
   const [birthday, setBirthday] = useState('');
+
+  const isPhoneNumberValid = phoneNumber.length === 10 && /^\d{10}$/.test(phoneNumber);
+
+  // adjust your name validation as needed
+  const isFullName = /[a-z]/.test(fullName) && /[A-Z]/.test(fullName);
 
   const handleSave = () => {
     if (!fullName.trim()) {
@@ -30,8 +34,16 @@ const Personal_info = () => {
       alert("Please select your birthday.");
       return;
     }
+    if (!isPhoneNumberValid) {
+      alert("Please enter a valid phone number.");
+      return;  // prevent navigation
+    }
+    if (!isFullName) {
+      alert("Full name must contain at least one uppercase and one lowercase letter.");
+      return;
+    }
 
-    // If everything is filled, you can log or store the data:
+    // If all good, navigate:
     console.log({
       fullName,
       gender,
@@ -40,15 +52,14 @@ const Personal_info = () => {
       birthday,
     });
 
-    // Then navigate to add_address page with the data
     navigate("/addaddress", {
       state: {
         fullName,
         gender,
         countryCode,
         phoneNumber,
-        birthday
-      }
+        birthday,
+      },
     });
   };
 
@@ -57,13 +68,12 @@ const Personal_info = () => {
       <div className="personal-info-header">
         <p className="personal-info-title">Personal information</p>
         <p className="personal-info-step">2 of 3</p>
-        <button
+        <X
+          size={20}
           className="personal-info-close"
           aria-label="Close"
           onClick={() => console.log('Close button clicked')}
-        >
-          <X size={20} />
-        </button>
+        />
       </div>
 
       <div className="personal-info-fields">
@@ -88,7 +98,7 @@ const Personal_info = () => {
                 checked={gender === 'male'}
                 onChange={(e) => setGender(e.target.value)}
               />
-              <span>Male</span>
+              <span className="personal-info-radio-span">Male</span>
             </label>
             <label className="personal-info-radio-label">
               <input
@@ -98,7 +108,7 @@ const Personal_info = () => {
                 checked={gender === 'female'}
                 onChange={(e) => setGender(e.target.value)}
               />
-              <span>Female</span>
+              <span className="personal-info-radio-span">Female</span>
             </label>
           </div>
         </div>
@@ -135,15 +145,14 @@ const Personal_info = () => {
             value={birthday}
             onChange={(e) => setBirthday(e.target.value)}
           />
-          <p className="personal-info-subtext">Let us know about your birthday so as not to miss a gift</p>
+          <p className="personal-info-subtext">
+            Let us know about your birthday so as not to miss a gift
+          </p>
         </div>
       </div>
 
       <div className="personal-info-save">
-        <button
-          className="personal-info-button"
-          onClick={handleSave}
-        >
+        <button className="personal-info-button" onClick={handleSave}>
           Save information
         </button>
       </div>

@@ -55,6 +55,8 @@
   padding: 4px;
   cursor: pointer;
   margin-left:5rem;
+  left:0;
+  top:50%;
  
 }
 
@@ -116,8 +118,6 @@
 .personal-info-radio-label input[type="radio"] {
   opacity: 0;
   position: absolute;
-  left: 0;
-  top: 0;
   width: 20px;
   height: 20px;
 
@@ -226,4 +226,84 @@
 .personal-info-button:focus {
   outline: none;
   box-shadow: 0 0 0 2px rgba(139,92,246,0.4);
+}
+/* Tablet screens (up to 768px) */
+@media (max-width: 768px) {
+  .personal-info-container {
+    padding: 16px;
+  }
+
+  .personal-info-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .personal-info-close {
+    align-self: flex-end;
+    margin-left: 0;
+  }
+
+  .personal-info-phone {
+    flex-direction: column;
+  
+  }
+  .personal-info-radio-span{
+    top:20%;    
+  }
+  .personal-info-country select {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+
+  .personal-info-input,
+  .personal-info-birthday input {
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  .personal-info-button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+  }
+
+  .personal-info-step {
+    margin-top: 4px;
+  }
+}
+
+/* Mobile screens (up to 480px) */
+@media (max-width: 480px) {
+  .personal-info-title {
+    font-size: 1rem;
+  }
+
+  .personal-info-step {
+    font-size: 0.9rem;
+  }
+
+  .personal-info-note {
+    font-size: 0.8rem;
+    padding: 8px;
+  }
+
+  .personal-info-input,
+  .personal-info-birthday input {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+
+  .personal-info-button {
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+
+  .personal-info-phone {
+    gap: 4px;
+  }
+  personal-info-header {
+    flex-wrap: wrap;  
+    gap: 8px;         
+  }
 }

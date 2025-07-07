@@ -18,7 +18,7 @@ const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
 
   const isEmailValid = email.includes("@") && email.includes(".");
-  const isPasswordValid = password.length >= 8;
+  const isPasswordValid = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*]).{8,}$/.test(password);
 
  const handleLogin = async (e) => {
   e.preventDefault();
@@ -100,7 +100,7 @@ const Login = () => {
             Send me news and promotions
           </label>
         </form>
-        <div>
+       <div className='bottom_text'>
           <p>By continuing I agree with the <a>Terms & Conditions,<br/>Privacy Policy</a></p>
         </div>
       </div>
