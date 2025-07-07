@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { X, Info } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
-
 import './Personal_info.css';
 
 const Personal_info = () => {
