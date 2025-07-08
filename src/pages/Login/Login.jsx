@@ -90,19 +90,16 @@ const Login = () => {
             {isPasswordValid && (
               <FontAwesomeIcon icon={faCheck} className="check-icon" />
             )}
-            <p>8+ Characters</p>
+            
           </div>
 
           <button type="submit">Log In</button><br/>
           <label className="custom-checkbox-container">
             <input type="checkbox" className="hidden-checkbox"/>
             <span className="custom-checkbox"></span>
-            Send me news and promotions
+            Remeber me
           </label>
         </form>
-       <div className='bottom_text'>
-          <p>By continuing I agree with the <a>Terms & Conditions,<br/>Privacy Policy</a></p>
-        </div>
       </div>
     </div>
   );

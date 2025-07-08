@@ -1,23 +1,28 @@
 import React  from "react";
-import { Search, Users, HelpCircle, DollarSign, Monitor,ArrowUp,ArrowDown } from "lucide-react";
+import { Search, Users, HelpCircle, DollarSign, Monitor,ArrowUp,ArrowDown, LayoutDashboard,ShoppingCart,ArrowUpRightSquare} from "lucide-react";
 
 import "./Dashboard.css"; 
 import { useState } from "react";
 
 export const Dashboard = () => {
- 
+ const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
+ const toggleSidebar = () => {
+    setSidebarCollapsed(prev => !prev);
+ }
   return (
     <div className="dashboard-container">
       {/* Sidebar */}
-      <aside className="dashboard-sidebar">
-        <h2 className="dashboard-logo">Dashboard.v01</h2>
+      <aside className={`dashboard-sidebar ${sidebarCollapsed ? 'collapsed' : ''}`}>
+      
+       <a className="dashboard-logo" onClick={toggleSidebar}><span className="icon_first"><LayoutDashboard size={24}/></span><span className="icon_text first">Dashboard.v01</span></a>
+     
         <nav className="dashboard-menu">
-          <a href="#">Dashboard    ›</a>
-          <a href="#">Product    ›</a>
-          <a href="#" className="active">Customers   ›</a>
-          <a href="#"><DollarSign size={15}/>Income  ›</a>
-          <a href="#">Promote</a>
-          <a href="#"><HelpCircle size={15}/>Help   ›</a>
+          <a href="#"><LayoutDashboard size={24}/><span className="icon_text">Dashboard    ›</span></a>
+          <a href="#"><ShoppingCart size={24}/><span className="icon_text">Product    ›</span></a>
+          <a href="#" className="active"><Users size={24}/><span className="icon_text">Customers   ›</span></a>
+          <a href="#"><DollarSign size={24}/><span className="icon_text">Income  ›</span></a>
+          <a href="#"><ArrowUpRightSquare size={24}/><span className="icon_text">Promote</span></a>
+          <a href="#"><HelpCircle size={24}/><span className="icon_text">Help   ›</span></a>
         </nav>
         <div className="dashboard-upgrade">
           <p>Upgrade to PRO to get access all Features!</p>
@@ -33,8 +38,9 @@ export const Dashboard = () => {
       {/* Main Content */}
       <main className="dashboard-content">
         {/* Header */}
+        
         <div className="dashboard-header">
-            <h1>Hello Evano 👋🏼</h1>
+            <p>Hello Evano 👋🏼,</p>
             <div className="dashboard-search">
              <Search size={30} color="gray" />
     <input type="text" placeholder="Search" />
@@ -51,7 +57,7 @@ export const Dashboard = () => {
             <div>
               <p>Total Customers</p>
               <h2>5,423</h2>
-              <small className="metric-up"><ArrowUp size={15}/>16% this month</small>
+              <small className="metric-up"><ArrowUp size={15} className="Arrow_up"/><span className="highlight">16%</span> this month</small>
             </div>
           </div>
           <div className="metric-card">
@@ -59,37 +65,41 @@ export const Dashboard = () => {
             <div className="users_logo">
             <Users size={24} />
             </div>
-            <div>
+            <div >
               <p>Members</p>
               <h2>1,893</h2>
-              <small className="metric-down"><ArrowDown size={15}/>1% this month</small>
+              <small className="metric-down"><ArrowDown size={15} className="Arrow_down"/><span className="highlight_red">1%</span> this month</small>
             </div>
           </div>
           <div className="metric-card">
-            <div className="users_logo">
-             <Monitor size={24}/>
-            </div>
-            <div>
-              <p>Active Now</p>
-              <h2>189</h2>
-              {/* could show profile icons later */}
-            </div>
-          </div>
+              <div className="users_logo">
+                <Monitor size={24} />
+              </div>
+
+  <div className="Active_now">
+    <p>Active Now</p>
+    <h2>189</h2>
+    <div className="profile_images">
+      <img src="../../assets/image 1.png" />
+      <img src="../../assets/image 2.png" />
+      <img src="../../assets/image 3.png" />
+      <img src="../../assets/image 4.png" />
+      <img src="../../assets/image 5.png" />
+    </div>
+  </div>
+</div>
+
         </div>
 
         {/* Customers Table */}
         <div className="dashboard-table">
           <div className="table-header">
             <h2>All Customers</h2>
-            <div className="search_cust">
-              
+            <div className="search_cust"> 
           <div className="table-search">
-  <Search className="search-icon" size={20} color="gray" />
-  <input type="text" placeholder="Search" />
-</div>
-
-            
-
+            <Search className="search-icon" size={20} color="gray" />
+            <input type="text" placeholder="Search"  className="search_placeholder"/>
+          </div>
            </div>
             <p className="srch_cust">short by:</p>
             <select>
@@ -100,7 +110,7 @@ export const Dashboard = () => {
           
           <table>
             <thead>
-              <tr>
+              <tr style={{color:"gray"}}>
                 <th>Customer Name</th>
                 <th>Company</th>
                 <th>Phone</th>
@@ -127,39 +137,39 @@ export const Dashboard = () => {
                   country: "Kiribati",
                   status: "Inactive"
                 },
-                //  {
-                //   name: "Jane Cooper",
-                //   company: "Microsoft",
-                //   phone: "(225) 555-0118",
-                //   email: "jane@microsoft.com",
-                //   country: "United States",
-                //   status: "Inactive"
-                // },
-                //  {
-                //   name: "Jane Cooper",
-                //   company: "Microsoft",
-                //   phone: "(225) 555-0118",
-                //   email: "jane@microsoft.com",
-                //   country: "United States",
-                //   status: "Inactive"
-                // },
-                //  {
-                //   name: "Jane Cooper",
-                //   company: "Microsoft",
-                //   phone: "(225) 555-0118",
-                //   email: "jane@microsoft.com",
-                //   country: "United States",
-                //   status: "Inactive"
-                // },
-                // {
-                //   name: "Floyd Miles",
-                //   company: "Yahoo",
-                //   phone: "(205) 555-0100",
-                //   email: "floyd@yahoo.com",
-                //   country: "Kiribati",
-                //   status: "Active"
-                // }
-                // // add more as needed
+                 {
+                  name: "Jane Cooper",
+                  company: "Microsoft",
+                  phone: "(225) 555-0118",
+                  email: "jane@microsoft.com",
+                  country: "United States",
+                  status: "Inactive"
+                },
+                 {
+                  name: "Jane Cooper",
+                  company: "Microsoft",
+                  phone: "(225) 555-0118",
+                  email: "jane@microsoft.com",
+                  country: "United States",
+                  status: "Inactive"
+                },
+                 {
+                  name: "Jane Cooper",
+                  company: "Microsoft",
+                  phone: "(225) 555-0118",
+                  email: "jane@microsoft.com",
+                  country: "United States",
+                  status: "Inactive"
+                },
+                {
+                  name: "Floyd Miles",
+                  company: "Yahoo",
+                  phone: "(205) 555-0100",
+                  email: "floyd@yahoo.com",
+                  country: "Kiribati",
+                  status: "Active"
+                }
+                // add more as needed
               ].map((cust, idx) => (
                 <tr key={idx}>
                   <td>{cust.name}</td>
@@ -197,4 +207,5 @@ export const Dashboard = () => {
       </main>
     </div>
   );
-};
+}
+
