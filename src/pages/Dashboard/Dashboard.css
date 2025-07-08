@@ -1,4 +1,17 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #f9f9fb;
+  color: #111827;
+  overflow: hidden;
+  height: 100vh;
+
+}
 
 .dashboard-container {
   display: flex;
@@ -6,6 +19,9 @@
   border: 1px solid #e5e7eb;
   border-radius: 20px;
   overflow-y: auto;
+  
+  height: 100vh;
+
 }
 
 /* Sidebar */
@@ -106,10 +122,12 @@
 
 .dashboard-header {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  border-radius: 0px;
+  gap: 1rem;
 }
+
 
 .dashboard-header p {
   font-weight: bold;
