@@ -3,16 +3,24 @@
   margin: 0;
   box-sizing: border-box;
 }
+html, body {
+  margin: 0;
+  padding: 0;
+  height: auto;
+  min-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto; 
+  background-color: #f9fafb;
+}
+
+
 
 .add-address-container {
-  background-color: white;
-  border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  width: 80%;
-  max-width: 500px;
-  padding: 24px;
-  margin: 0 auto;
+  margin: 40px auto 0 auto; /* ✅ Top margin */
+  padding: 16px;
 }
+
+
 
 .add-address-header {
   display: flex;
@@ -61,6 +69,7 @@
 }
 .search-address-wrapper {
   position: relative;
+  display: flex;
 }
 .search-icon {
   position: absolute;
@@ -68,6 +77,26 @@
   top: 60%;
   transform: translateY(-50%);
   color: #6b7280;
+  margin-right:100px;
+  
+
+}
+.search-icon-text{
+  position: absolute;
+  left: 0px;
+  top: 60%;
+  transform: translateY(-50%);
+  color: #6b7280;
+  text-align: center;
+  
+}
+.search-icon-text{
+  position: absolute;
+  left: 0px;
+  top: 60%;
+  transform: translateY(-50%);
+  color: #6b7280;
+  margin-right:50px;
 }
 .search-address-input {
   width: 100%;
@@ -78,15 +107,17 @@
   font-size: 1rem;
   background-color: white;
   color: black;
+  
 }
 .search-address-text {
   color: gray;
   font-size: small;
 
   text-align: left;
+  margin-right: 20px;
 }
 
-/* .address-options {
+.address-options {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -104,7 +135,7 @@
   height: 40px;
   padding: 0 12px;
   margin-bottom: 7rem;
-} */
+}
  .address-options {
   display: flex;
   flex-direction: column;
@@ -158,9 +189,37 @@
   .add-address-container {
     padding: 32px;
   }
+
 }
 @media (min-width: 768px) {
   .share-address {
     margin-top: 7rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .add-address-container {
+    margin-top: 40px;
+    padding: 16px;
+  }
+
+  .add-address-header {
+    margin-top: 0;
+  }
+
+  .add-address-title {
+    font-size: 0.95rem;
+  }
+
+  .add-address-step {
+    font-size: 0.8rem;
+  }
+
+  .add-address-close {
+    transform: scale(0.9);
+  }
+
+  .share-address {
+    margin-bottom: 5rem;
   }
 }

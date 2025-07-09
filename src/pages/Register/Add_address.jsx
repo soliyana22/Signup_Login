@@ -1,15 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { X, Search, Users, Clock, DollarSign, MapPin } from 'lucide-react'
 import { useNavigate } from 'react-router-dom';
 
 import './Add_address.css'
 
 const Add_address = () => {
-  const handleaddress = () => {
+const navigate = useNavigate();
+const handleaddress = () => {
     navigate("/manual")
   }
-  const navigate = useNavigate();
 
+ 
   return (
     <div className="add-address-container">
       <div className="add-address-header">
@@ -31,10 +32,11 @@ const Add_address = () => {
           
           <input
             type="text"
-            placeholder="Search for address"
+            placeholder='Search for address'
             className="search-address-input"
           />
-          <Search size={15} className="search-icon" />
+          <label className='search-icon-text'></label>
+          <Search size={15} className="search-icon"/>
         </div>
         <p className="search-address-text">Your address is not visible to other users</p>
       </div>
