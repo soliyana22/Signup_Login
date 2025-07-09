@@ -335,9 +335,147 @@
     overflow-y: auto;
     max-height: calc(100vh - 180px); /* Leave space for header/footer */
   }
+
 }
 
 }
+/* Mobile screens (up to 480px) */
+@media (max-width: 480px) {
+  html, body {
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    height: auto;
+  }
+
+  .personal-info-container {
+    padding: 1rem;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 70px;
+    max-width: 100%;
+    max-height: fit-content; /* Allow full-width for small screens */
+  }
+
+  .personal-info-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 2rem;
+    padding-bottom: 16px;
+  }
+
+  .personal-info-title {
+    font-size: 1rem;
+    flex: 1 1 auto;
+    margin: 0;
+    text-align: center;
+  }
+
+  .personal-info-step {
+    margin-top: 4px;
+    text-align: center;
+  }
+
+  .personal-info-close {
+    margin-left: auto;
+    padding: 4px;
+    align-self: center;
+    font-size: 1.2rem;
+  }
+
+  .personal-info-fields {
+    overflow-y: auto;
+    max-height: calc(100vh - 180px); /* Leave space for header/footer */
+  }
+
+  .personal-info-input,
+  .personal-info-birthday input {
+    font-size: 1rem;
+    padding: 10px;
+    margin-bottom: 12px;
+  }
+
+  .personal-info-label {
+    font-size: 0.9rem;
+  }
+
+  .personal-info-button {
+    margin-bottom: 5rem;
+    text-align: center;
+    width: 80%; /* Ensure the button fits */
+    padding: 12px;
+    font-size: 1rem;
+  }
+
+  .personal-info-phone {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .personal-info-country select {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+  }
+
+  .personal-info-gender {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .personal-info-radio-label {
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .personal-info-radio-span {
+    font-size: 0.9rem;
+  }
+
+  .personal-info-note {
+    font-size: 0.8rem;
+    padding: 10px;
+    gap: 8px;
+  }
+
+  .personal-info-icon {
+    font-size: 1rem;
+  }
+
+  /* Adjust the calendar icon inside the input */
+  .personal-info-calendar {
+    font-size: 0.8rem;
+    right: 8px;
+  }
+
+  .personal-info-subtext {
+    font-size: 0.8rem;
+    margin-top: 4px;
+    text-align: center;
+  }
+
+  /* Smaller font sizes for inputs and labels */
+  .personal-info-label,
+  .personal-info-input,
+  .personal-info-radio-span {
+    font-size: 0.9rem;
+  }
+
+  .personal-info-close:hover {
+    color: #374151;
+    background-color: #f3f4f6;
+  }
+}
+
 
 /* Mobile screens (up to 480px) */
 
