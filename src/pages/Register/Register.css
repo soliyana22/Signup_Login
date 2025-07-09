@@ -7,13 +7,12 @@
 .register_container{
     justify-content: center;
     align-items: center;
-    border:1px solid transparent;
+    border:1px solid rgb(214, 212, 212);
     border-radius: 20px;
     width:480px;
     max-width: 700px;
     height:38rem;
     min-height: 100px;
-    background-color: white;
 }
 .register_title{
     display: flex;
@@ -31,7 +30,6 @@
   display: flex;
   gap: 1rem;
   margin-left: 2rem;
-  margin-bottom:1.5rem;
 }
 
 .reg_icons {
@@ -54,12 +52,12 @@
 }
 input {
     width: 25rem;
-    height: 50px;
+    height: 56px;
     
     background-color: white;
     color:black;
-
-    gap:3px;
+    border:1px solid gray;
+    gap:5px;
     border-radius: 10px;
     margin-top:1rem;
 }
@@ -100,7 +98,7 @@ height: 56px;
 
 .input-group input:focus {
   outline: none;
-  border: 2px solid #5932EA;
+  border: 3px solid #5932EA;
 }
 
 .input-group label {
@@ -170,9 +168,9 @@ height: 56px;
   background-color: #f0dce2; 
 }
 .active-link {
-  color:black;
+  color:rgb(53, 53, 53);
   text-decoration: underline #EF498F 2px;
-  text-underline-offset: 4px;
+  text-underline-offset: 15px;
   font-weight: bold;
 }
 
@@ -209,4 +207,94 @@ height: 56px;
   margin-top: 2rem;
   margin-left:50px;
   color:rgb(179, 178, 178);
+}
+@media (max-width: 600px) {
+  .register_container {
+    width: 90%;
+    height: auto;
+    padding: 1rem;
+    border-radius: 15px;
+  }
+
+  .register_title {
+     flex-direction: row;
+    flex-wrap: nowrap; /* force one row */
+    justify-content: space-evenly;
+    margin-left: 0;
+    padding: 0 1rem;
+  }
+
+  #login {
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+
+    .register_icons {
+    flex-direction: row;
+    flex-wrap: nowrap; /* force one row */
+    justify-content: space-evenly;
+    margin-left: 0;
+    padding: 0 1rem;
+  }
+
+  .reg_icons {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+  }
+
+  .icon {
+    font-size: 20px;
+  }
+
+
+  .text_under_icon {
+    margin-left: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .input-group {
+    margin-left: 1rem;
+    width: 90%;
+  }
+
+  .input-group input {
+    width: 100%;
+    font-size: 14px;
+    padding: 16px 12px;
+  }
+
+  .input-group label {
+    font-size: 14px;
+    top: 16px;
+    left: 12px;
+  }
+
+  .eye-icon,
+  .check-icon {
+    right: 10px;
+    top: 30px;
+    font-size: 14px;
+  }
+
+  .custom-checkbox-container {
+    margin-left: 1rem;
+    font-size: 1rem;
+  }
+
+  .custom-checkbox {
+    height: 20px;
+    width: 20px;
+  }
+
+  button {
+    width: 90%;
+    margin-left: 1rem;
+  }
+
+  .bottom_text {
+    margin-left: 1rem;
+    font-size: 0.9rem;
+    text-align: center;
+  }
 }

@@ -208,3 +208,96 @@ height: 56px;
   margin-left:50px;
   color:rgb(179, 178, 178);
 }
+@media (max-width: 600px) {
+  .register_container {
+    width: 90%;
+    height: auto;
+    padding: 1rem;
+    border-radius: 15px;
+    padding: 1rem;
+    border-radius: 15px;
+    margin: 1rem auto;
+  }
+
+  .register_title {
+     flex-direction: row;
+    flex-wrap: nowrap; /* force one row */
+    justify-content: space-evenly;
+    margin-left: 0;
+    padding: 0 1rem;
+  }
+
+  #login {
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+
+    .register_icons {
+    flex-direction: row;
+    flex-wrap: nowrap; /* force one row */
+    justify-content: space-evenly;
+    margin-left: 0;
+    padding: 0 1rem;
+  }
+
+  .reg_icons {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+  }
+
+  .icon {
+    font-size: 20px;
+  }
+
+
+  .text_under_icon {
+    margin-left: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .input-group {
+    margin-left: 1rem;
+    width: 90%;
+  }
+
+  .input-group input {
+    width: 100%;
+    font-size: 14px;
+    padding: 16px 12px;
+  }
+
+  .input-group label {
+    font-size: 14px;
+    top: 16px;
+    left: 12px;
+  }
+
+  .eye-icon,
+  .check-icon {
+    right: 10px;
+    top: 30px;
+    font-size: 14px;
+  }
+
+  .custom-checkbox-container {
+    margin-left: 1rem;
+    font-size: 1rem;
+  }
+
+  .custom-checkbox {
+    height: 20px;
+    width: 20px;
+  }
+
+  button {
+    width: 90%;
+    margin-left: 1rem;
+  }
+
+  .bottom_text {
+    margin-left: 1rem;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+}
