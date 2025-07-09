@@ -277,32 +277,35 @@
   .personal-info-step {
     margin-top: 4px;
   }
-}
-
-/* Mobile screens (up to 480px) */
-
-
-/* Mobile-first responsiveness fix for header layout */
-@media (max-width: 600px) {
-  .personal-info-container{
-    margin-top:1rem;
-    margin-bottom: 2rem;
+  @media (max-width: 600px) {
+  html, body {
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    height: auto;
   }
+
+  .personal-info-container {
+    padding: 1rem;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
   .personal-info-header {
     display: flex;
-    flex-direction: row;      /* Stay in one line */
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;          /* Wrap items if space is tight */
+    flex-wrap: wrap;
     gap: 8px;
-    white-space: normal; 
-    margin-top:2.5rem;         /* Allow wrapping within each item */
+    margin-top: 2rem;
   }
 
   .personal-info-title {
     font-size: 1rem;
+    flex: 1 1 auto;
     margin: 0;
-    flex-shrink: 1;           /* Allow shrinking to fit */
   }
 
   .personal-info-progress {
@@ -317,10 +320,22 @@
     padding: 4px;
     align-self: center;
   }
-  .personal-info-button{
-    margin-bottom: 4rem;
+
+  .personal-info-button {
+    margin-bottom: 2rem;
     text-align: center;
-   width:80%;
+    width: 100%;
+  }
+
+  .personal-info-fields {
+    overflow-y: auto;
+    max-height: calc(100vh - 180px); /* Leave space for header/footer */
   }
 }
 
+}
+
+/* Mobile screens (up to 480px) */
+
+
+/* Mobile-first responsiveness fix for header layout */
