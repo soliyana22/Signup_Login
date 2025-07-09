@@ -202,40 +202,46 @@ left:0;
                 margin-top: 4rem;
             }
         }
- @media (max-width: 479px) {
-            .add-address-container {
-                padding: 18px;
-            }
-            
-            .add-address-header {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 8px;
-            }
-            
-            .add-address-title {
-                font-size: 1.1rem;
-            }
-            
-            .add-address-step {
-                font-size: 1rem;
-            }
-            
-            .add-address-close {
-                position: absolute;
-                top: 0;
-                right: 0;
-            }
-            
-            .search-address-input {
-                height: 50px;
-                font-size: 0.95rem;
-                
-            }
-            
-            .save_btn {
-                font-size: 1.1rem;
-                padding: 12px 0;
-                margin-top: 2.5rem;
-            }
-        }
+@media (max-width: 767px) {
+  .specific {
+    flex-direction: column;
+  }
+
+  .search-address-input {
+    height: 50px;
+    font-size: 0.95rem;
+  }
+
+  .add-address-container {
+    padding: 16px;
+    margin: 12px auto;
+  }
+
+  .save_btn {
+    font-size: 1.05rem;
+    padding: 12px;
+    margin-top: 2rem;
+  }
+
+  .add-address-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding-bottom: 12px;
+  }
+
+  .add-address-title {
+    font-size: 1.1rem;
+  }
+
+  .add-address-step {
+    font-size: 1rem;
+  }
+
+  .add-address-close {
+    align-self: flex-end;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+  }
+}
