@@ -94,11 +94,11 @@ const Login = () => {
             <p>8+ Characters</p>
           </div>
 
-          <button type="submit">Create Account</button><br/>
+          <button type="submit">Log In</button><br/>
           <label className="custom-checkbox-container">
             <input type="checkbox" className="hidden-checkbox"/>
             <span className="custom-checkbox"></span>
-            Send me news and promotions
+            Remember me
           </label>
         </form>
         <div className='bottom_text'>
