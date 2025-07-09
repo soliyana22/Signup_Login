@@ -306,4 +306,86 @@
     flex-wrap: wrap;  
     gap: 8px;         
   }
+  @media (max-width: 600px) {
+  .personal-info-container {
+    padding: 16px;
+    width: 100%;
+    border-radius: 12px;
+  }
+
+  .personal-info-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .personal-info-title {
+    font-size: 1.1rem;
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  .personal-info-progress {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .personal-info-close {
+    margin-left: auto;
+    align-self: flex-end;
+    padding: 4px;
+  }
+
+  .personal-info-fields {
+    gap: 16px;
+  }
+
+  .personal-info-phone {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .personal-info-country select {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+
+  .personal-info-input,
+  .personal-info-birthday input {
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+
+  .personal-info-note {
+    font-size: 0.85rem;
+    padding: 10px;
+  }
+
+  .personal-info-button {
+    font-size: 1rem;
+    padding: 12px;
+  }
+
+  .personal-info-gender {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .personal-info-radio-label span::before {
+    width: 14px;
+    height: 14px;
+    top: 2px;
+  }
+
+  .personal-info-subtext {
+    font-size: 0.8rem;
+  }
+
+  .personal-info-step {
+    font-size: 1rem;
+  }
+}
+
 }
