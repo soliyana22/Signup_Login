@@ -240,7 +240,8 @@
     align-items: center;
     flex-wrap: wrap;          /* Wrap items if space is tight */
     gap: 8px;
-    white-space: normal;      /* Allow wrapping within each item */
+    white-space: normal;  
+    margin-top:2rem;    /* Allow wrapping within each item */
   }
 
   .personal-info-close {
@@ -283,6 +284,10 @@
 
 /* Mobile-first responsiveness fix for header layout */
 @media (max-width: 600px) {
+  .personal-info-container{
+    margin-top:1rem;
+    margin-bottom: 2rem;
+  }
   .personal-info-header {
     display: flex;
     flex-direction: row;      /* Stay in one line */
@@ -290,7 +295,8 @@
     align-items: center;
     flex-wrap: wrap;          /* Wrap items if space is tight */
     gap: 8px;
-    white-space: normal;      /* Allow wrapping within each item */
+    white-space: normal; 
+    margin-top:2.5rem;         /* Allow wrapping within each item */
   }
 
   .personal-info-title {
@@ -310,6 +316,11 @@
     margin-left: auto;
     padding: 4px;
     align-self: center;
+  }
+  .personal-info-button{
+    margin-bottom: 4rem;
+    text-align: center;
+   width:80%;
   }
 }
 
