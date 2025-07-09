@@ -31,9 +31,10 @@ const Login = () => {
 }
 
   return (
+  
     <div className='register_container'>
       <div className='register_title'>
-        <NavLink 
+         <NavLink 
           to="/" 
           className={({ isActive }) => isActive ? "active-link" : "inactive-link"}
         >
@@ -54,7 +55,7 @@ const Login = () => {
         <div className='reg_icons'><FcGoogle className="icon" /></div>
       </div>
 
-      <p className='text_under_icon'>or Login with email</p>
+      <p className='text_under_icon'>or register with email</p>
       <div className='form_container'>
         <form onSubmit={handleLogin}>
           <div className='input-group'>
@@ -90,18 +91,22 @@ const Login = () => {
             {isPasswordValid && (
               <FontAwesomeIcon icon={faCheck} className="check-icon" />
             )}
-            
+            <p>8+ Characters</p>
           </div>
 
-          <button type="submit">Log In</button><br/>
+          <button type="submit">Create Account</button><br/>
           <label className="custom-checkbox-container">
             <input type="checkbox" className="hidden-checkbox"/>
             <span className="custom-checkbox"></span>
-            Remeber me
+            Send me news and promotions
           </label>
         </form>
+        <div className='bottom_text'>
+          <p>By continuing I agree with the <a>Terms & Conditions,<br/>Privacy Policy</a></p>
+        </div>
       </div>
     </div>
   );
 }
+
 export default Login;
