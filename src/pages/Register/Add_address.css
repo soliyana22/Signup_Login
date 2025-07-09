@@ -77,19 +77,15 @@ html, body {
   top: 60%;
   transform: translateY(-50%);
   color: #6b7280;
-  margin-right:100px;
+  margin-right:10px;
   
 
 }
-.search-icon-text{
-  position: absolute;
-  left: 0px;
-  top: 60%;
-  transform: translateY(-50%);
-  color: #6b7280;
-  text-align: center;
-  
+.search-address-wrapper input[placeholder="Search for address"] {
+  margin-left: 1rem;
 }
+
+
 .search-icon-text{
   position: absolute;
   left: 0px;
@@ -97,6 +93,7 @@ html, body {
   transform: translateY(-50%);
   color: #6b7280;
   margin-right:50px;
+  text-align: center;
 }
 .search-address-input {
   width: 100%;
