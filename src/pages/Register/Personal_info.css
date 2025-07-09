@@ -217,6 +217,7 @@
   cursor: pointer;
   transition: background-color 0.3s;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-top:-15px;
 }
 
 .personal-info-button:hover {
@@ -266,6 +267,11 @@
   .personal-info-birthday input {
     font-size: 1rem;
     padding: 10px;
+    margin-bottom: -10px;
+   
+  }
+  .personal-info-birthday{
+     margin-top: -20px;
   }
 
   .personal-info-button {
@@ -353,9 +359,10 @@
     margin: 0 auto;
     width: 100%;
     box-sizing: border-box;
-    margin-top: 70px;
+    margin-top: 100px;
     max-width: 100%;
     max-height: fit-content; /* Allow full-width for small screens */
+    margin-bottom: 20px;
   }
 
   .personal-info-header {
@@ -364,7 +371,7 @@
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 4px;
     margin-top: 2rem;
     padding-bottom: 16px;
   }
@@ -397,7 +404,7 @@
   .personal-info-birthday input {
     font-size: 1rem;
     padding: 10px;
-    margin-bottom: 12px;
+    margin-bottom: 0.1rem;
   }
 
   .personal-info-label {
@@ -405,7 +412,7 @@
   }
 
   .personal-info-button {
-    margin-bottom: 5rem;
+    margin-bottom: 7rem;
     text-align: center;
     width: 80%; /* Ensure the button fits */
     padding: 12px;
@@ -415,7 +422,7 @@
   .personal-info-phone {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 2px;
   }
 
   .personal-info-country select {
@@ -455,11 +462,11 @@
   .personal-info-calendar {
     font-size: 0.8rem;
     right: 8px;
+    gap:-2px;
   }
 
   .personal-info-subtext {
     font-size: 0.8rem;
-    margin-top: 4px;
     text-align: center;
   }
 
@@ -473,6 +480,11 @@
   .personal-info-close:hover {
     color: #374151;
     background-color: #f3f4f6;
+  }
+  .personal-info-button{
+    height:30px;
+    text-align: center;
+    width:100%;
   }
 }
 
