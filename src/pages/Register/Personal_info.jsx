@@ -11,7 +11,7 @@ const Personal_info = () => {
   const [phoneNumber, setPhoneNumber] = useState('');
   const [birthday, setBirthday] = useState('');
 
-  const isPhoneNumberValid = phoneNumber.length === 10 && /^\d{10}$/.test(phoneNumber);
+  const isPhoneNumberValid = phoneNumber.length >= 7 && /^\d{7}$/.test(phoneNumber);
 
   // adjust your name validation as needed
   const isFullName = /[a-z]/.test(fullName) && /[A-Z]/.test(fullName);
@@ -27,10 +27,6 @@ const Personal_info = () => {
     }
     if (!phoneNumber.trim()) {
       alert("Please enter your phone number.");
-      return;
-    }
-    if (!birthday) {
-      alert("Please select your birthday.");
       return;
     }
     if (!isPhoneNumberValid) {
@@ -152,7 +148,7 @@ const Personal_info = () => {
 
       <div className="personal-info-save">
         <button className="personal-info-button" onClick={handleSave}>
-          Save information
+          <span className='save_btn'>Save information</span>
         </button>
       </div>
     </div>

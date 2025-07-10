@@ -18,7 +18,6 @@
   justify-content: space-between;  /* spread left/right */
   align-items: center;             /* keep items on same horizontal line */
   margin-bottom: 24px;
-  border-bottom: 1px solid #e5e7eb;
   padding-bottom: 16px;
   white-space: nowrap;
 }
@@ -74,12 +73,13 @@
   display: flex;
   flex-direction: column;
   gap: 24px;
+  
 }
 
 .personal-info-input {
   width: 100%;
   padding: 6px;
-  border: 1px solid #d1d5db;
+  border: 2px solid #d1d5db;
   border-radius: 8px;
   transition: all 0.3s;
   background-color: white;
@@ -165,7 +165,7 @@
 .personal-info-country select {
   width: 96px;
   padding: 20px;
-  border: 1px solid #d1d5db;
+  border: 2px solid #d1d5db;
   border-radius: 8px;
   background-color: white;
   color:black;
@@ -182,7 +182,7 @@
 .personal-info-birthday input {
   width: 100%;
   padding: 12px;
-  border: 1px solid #d1d5db;
+  border: 2px solid #d1d5db;
   border-radius: 8px;
 }
 
@@ -274,11 +274,7 @@
      margin-top: -20px;
   }
 
-  .personal-info-button {
-    width: 100%;
-    padding: 12px;
-    font-size: 1rem;
-  }
+  
 
   .personal-info-step {
     margin-top: 4px;
@@ -330,12 +326,7 @@
     align-self: center;
   }
 
-  .personal-info-button {
-    margin-bottom: 5rem;
-    text-align: center;
-    width: 80%;
-
-  }
+ 
 
   .personal-info-fields {
     overflow-y: auto;
@@ -379,7 +370,7 @@
   .personal-info-title {
     font-size: 1rem;
     flex: 1 1 auto;
-    margin: 0;
+    margin-left:-1px;
     text-align: center;
   }
 
@@ -411,13 +402,7 @@
     font-size: 0.9rem;
   }
 
-  .personal-info-button {
-    margin-bottom: 7rem;
-    text-align: center;
-    width: 80%; /* Ensure the button fits */
-    padding: 12px;
-    font-size: 1rem;
-  }
+  
 
   .personal-info-phone {
     display: flex;
@@ -481,11 +466,16 @@
     color: #374151;
     background-color: #f3f4f6;
   }
-  .personal-info-button{
-    height:30px;
-    text-align: center;
-    width:100%;
+  .personal-info-save{
+    justify-content: center;
   }
+  .personal-info-save .personal-info-button
+  {
+    text-align: center;
+    margin-right: 4rem;
+    width:90%;
+  }
+  
   
 }
 
