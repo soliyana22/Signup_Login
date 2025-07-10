@@ -228,7 +228,35 @@
   outline: none;
   box-shadow: 0 0 0 2px rgba(139,92,246,0.4);
 }
-/* Tablet screens (up to 768px) */
+.personal-info-birthday {
+  position: relative;
+  width: fit-content; /* or set a specific width */
+}
+
+.birthday-input {
+  width: 100%;
+  padding: 16px 12px;
+  font-size: 16px;
+  position: relative;
+  z-index: 1;
+}
+
+
+.personal-info-birthday-label {
+  position: absolute;
+  top: 8px;
+  left: 12px;
+  right: 12px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: gray;
+  pointer-events: none; 
+  z-index: 2;
+}
+
+
+
 @media (max-width: 768px) {
   .personal-info-container {
     padding: 16px;

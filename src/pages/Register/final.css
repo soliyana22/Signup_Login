@@ -111,12 +111,19 @@ body {
 }
 
 @media (max-width: 480px) {
+  .final_container{
+    width:100%;
+  }
   .final_message {
     font-size: 1.25rem;
   }
 
   .final_image {
     max-width: 150px;
+  }
+  .login_btn{
+    width:80%;
+    margin-right: 2rem;
   }
 }
 

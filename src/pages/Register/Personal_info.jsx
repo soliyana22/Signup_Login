@@ -72,7 +72,7 @@ const Personal_info = () => {
       </div>
 
       <div className="personal-info-fields">
-        <div>
+      
           <input
             type="text"
             placeholder="Full name"
@@ -80,7 +80,7 @@ const Personal_info = () => {
             value={fullName}
             onChange={(e) => setFullName(e.target.value)}
           />
-        </div>
+       
 
         <div className="Gender_radio">
           <p className="personal-info-label">Gender:</p>
@@ -137,9 +137,11 @@ const Personal_info = () => {
         <div className="personal-info-birthday">
           <input
             type="date"
+            placeholder="Birthday"
             value={birthday}
             onChange={(e) => setBirthday(e.target.value)}
           />
+          
           <p className="personal-info-subtext">
             Let us know about your birthday so as not to miss a gift
           </p>

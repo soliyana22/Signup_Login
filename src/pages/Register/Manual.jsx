@@ -40,7 +40,7 @@ const Manual = () => {
               className="search-address-input"
             />
             <label className="floating-label first">Apartment</label>
-            <label className="floating-label second">Optional</label>
+            <label className="second">Optional</label>
           </div>
           <div className="input-group">
             <input
