@@ -55,7 +55,7 @@ const Login = () => {
         <div className='reg_icons'><FcGoogle className="icon" /></div>
       </div>
 
-      <p className='text_under_icon'>or register with email</p>
+      <p className='text_under_icon'>or log in with email</p>
       <div className='form_container'>
         <form onSubmit={handleLogin}>
           <div className='input-group'>

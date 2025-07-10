@@ -777,4 +777,10 @@ th, td {
     display: block;
   }
 }
+@media (max-width:400px) {
+  .dashboard-menu{
+    width:100%;
+  }
+}
+
 
