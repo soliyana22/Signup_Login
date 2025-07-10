@@ -42,7 +42,7 @@ export const Dashboard = () => {
         <div className="dashboard-header">
             <p>Hello Evano 👋🏼,</p>
             <div className="dashboard-search">
-             <Search size={30} color="gray" />
+             <Search size={30} color="gray" className="dashboard-search-icon" />
     <input type="text" placeholder="Search" />
   </div>
 </div>
