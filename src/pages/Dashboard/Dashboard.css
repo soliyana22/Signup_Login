@@ -122,7 +122,7 @@ body {
 
 .dashboard-header {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap:wrap;
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
@@ -727,6 +727,18 @@ th, td {
     gap: 1rem;
     align-items: flex-start;
   }
+    .dashboard-table {
+    overflow-x: scroll;
+    overflow-y: scroll;
+     margin-left: 2rem;
+   
+  }
+  
+  table {
+    width: max-content;
+    white-space: nowrap;
+   
+  }
 }
 
 /* Even smaller screens */
@@ -736,20 +748,13 @@ th, td {
   .dashboard-container {
     flex-direction: column;
     height: auto;
-    overflow: hidden;
     position: relative;
-    margin-top:56rem;
-  
+    margin-top:48rem;
     margin-left: 15rem;
     text-align: center;
+   
   }
-  .dashboard-search-icon{
-    margin:
-  }
- .dashboard-header{
-  margin-right: 30rem;
- }
-  /* Sidebar acts like overlay and covers 50% */
+/* Sidebar acts like overlay and covers 50% */
   .dashboard-sidebar {
     width: 50%;
     position: absolute;
@@ -785,10 +790,11 @@ th, td {
   }
 
   .metric-card {
-    width: 30%;
+    width: 50%;
     flex-direction: row;
     padding: 1rem;
     margin-left: 2.5rem;
+ 
     
   }
 
@@ -797,7 +803,9 @@ th, td {
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-  
+    margin-right:30rem;
+    justify-content: flex-start;
+    
   }
 
   .dashboard-search {
@@ -810,14 +818,15 @@ th, td {
   .dashboard-table {
     overflow-x: scroll;
     overflow-y: scroll;
+     margin-left: 2rem;
    
   }
-
+  
   table {
-    min-width: 600px;
-    display: block;
-    overflow-x: auto;
+    width: max-content;
     white-space: nowrap;
+     margin-right: 20rem;
+   
   }
 
   .table-footer {
@@ -825,15 +834,12 @@ th, td {
     align-items: flex-start;
     gap: 0.5rem;
   }
-  .dashboard-table {
-    overflow-x: auto;
-  }
 
   .dashboard-table table {
     display: block;
-    min-width: 600px; /* Prevent table from squishing */
     white-space: nowrap;
     overflow-x: auto;
+   
   }
 
   .table-header {
@@ -853,5 +859,9 @@ th, td {
     align-items: flex-start;
     gap: 0.5rem;
   }
+  .dashboard-table {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; /* for smooth scrolling on mobile */
+}
 }
 
