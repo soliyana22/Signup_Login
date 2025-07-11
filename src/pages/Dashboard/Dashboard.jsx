@@ -1,5 +1,5 @@
 import React  from "react";
-import { Search, Users, HelpCircle, DollarSign, Monitor,ArrowUp,ArrowDown, LayoutDashboard,ShoppingCart,ArrowUpRightSquare} from "lucide-react";
+import { Search, Users, HelpCircle, DollarSign, Monitor,ArrowUp,ArrowDown, LayoutDashboard,ShoppingCart,ArrowUpRightSquare,Menu} from "lucide-react";
 
 import "./Dashboard.css"; 
 import { useState } from "react";
@@ -11,9 +11,13 @@ export const Dashboard = () => {
  }
   return (
     <div className="dashboard-container">
-      {/* Sidebar */}
-      <aside className={`dashboard-sidebar ${sidebarCollapsed ? 'collapsed' : ''}`}>
-      
+     
+      {/* <button className="mobile-toggle" onClick={toggleSidebar}>
+        <Menu size={24}/>
+      </button> */}
+
+
+   <aside className={`dashboard-sidebar ${sidebarCollapsed ? 'collapsed' : ''}`}>
        <a className="dashboard-logo" onClick={toggleSidebar}><span className="icon_first"><LayoutDashboard size={24}/></span><span className="icon_text first">Dashboard.v01</span></a>
      
         <nav className="dashboard-menu">
@@ -21,7 +25,7 @@ export const Dashboard = () => {
           <a href="#"><ShoppingCart size={24}/><span className="icon_text">Product    ›</span></a>
           <a href="#" className="active"><Users size={24}/><span className="icon_text">Customers   ›</span></a>
           <a href="#"><DollarSign size={24}/><span className="icon_text">Income  ›</span></a>
-          <a href="#"><ArrowUpRightSquare size={24}/><span className="icon_text">Promote</span></a>
+          <a href="#"><ArrowUpRightSquare size={24}/><span className="icon_text">Promote  ›</span></a>
           <a href="#"><HelpCircle size={24}/><span className="icon_text">Help   ›</span></a>
         </nav>
         <div className="dashboard-upgrade">
