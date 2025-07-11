@@ -749,7 +749,7 @@ th, td {
     flex-direction: column;
     height: auto;
     position: relative;
-    margin-top:48rem;
+    margin-top:47rem;
     margin-left: 15rem;
     text-align: center;
    
@@ -790,7 +790,7 @@ th, td {
   }
 
   .metric-card {
-    width: 50%;
+    width: 30%;
     flex-direction: row;
     padding: 1rem;
     margin-left: 2.5rem;
