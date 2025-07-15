@@ -37,7 +37,7 @@ return(
         <div className="earning">
             <div className="total-customers">
                 <div className="total-customers-icon">
-                      <i className="bi bi-people"><Users size={24}/></i>
+                      <i className="bi bi-people"></i>
                 </div>
                 <div className="earning-right">
                     <p className='earning-right-p'>Total Customers</p>
@@ -47,7 +47,7 @@ return(
             </div>
             <div className="members">
                 <div className="total-customers-icon">
-                      <i className="bi bi-people"><Users size={24}/></i>
+                      <i className="bi bi-people"></i>
                 </div>
                 <div className="earning-right">
                     <p className='earning-right-p'>Members</p>
@@ -57,7 +57,7 @@ return(
             </div>
             <div className="active-now">
                 <div className="total-customers-icon">
-                      <i className="bi bi-people"><Monitor size={24}/></i>
+                      <i className="bi bi-display"></i>
                 </div>
                 <div className="earning-right">
                     <p className='earning-right-p'>Active Now</p>
@@ -140,7 +140,7 @@ return(
       <p>Showing data 1 to 8 of 256k entries</p>
       <div className="pages">
         <div className="previous">
-            <i className='bi bi-chevron-left'><ChevronLeft /></i>
+            <i className='bi bi-chevron-left'></i>
         </div>
      {[1, 2, 3].map((pageNum) => (
   <div
@@ -152,7 +152,7 @@ return(
   </div>
 ))}
         <div className="next">
-            <i className='bi bi-chevron-right'><ChevronRight /></i>
+            <i className='bi bi-chevron-right'></i>
         </div>
       </div>
 </div>
