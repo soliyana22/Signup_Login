@@ -50,7 +50,7 @@ const Login = () => {
       </div>
 
       <div className='register_icons'>
-        <div className='reg_icons'><FontAwesomeIcon icon={faApple} className="icon" /></div>
+        <div className='reg_icons'><FontAwesomeIcon icon={faApple} className="icon" style={{color:"black"}}/></div>
         <div className='reg_icons'><FontAwesomeIcon icon={faFacebookF} className="icon" style={{ color: "#1877F2" }} /></div>
         <div className='reg_icons'><FcGoogle className="icon" /></div>
       </div>
