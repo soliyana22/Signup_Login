@@ -10,11 +10,9 @@ const Personal_info = () => {
   const [countryCode, setCountryCode] = useState('+598');
   const [phoneNumber, setPhoneNumber] = useState('');
   const [birthday, setBirthday] = useState('');
-
-  const isPhoneNumberValid = phoneNumber.length >= 7 && /^\d{7}$/.test(phoneNumber);
-
+  const isPhoneNumberValid = /^\d+$/.test(phoneNumber);
   // adjust your name validation as needed
-  const isFullName = /[a-z]/.test(fullName) && /[A-Z]/.test(fullName);
+  const isFullName = /[a-z]/.test(fullName) || /[A-Z]/.test(fullName);
 
   const handleSave = () => {
     if (!fullName.trim()) {

@@ -14,7 +14,7 @@ const Final = () => {
     
       <div className="final_image_container">
         <img
-          src="/assets/final_image.png"
+          src="../../assets/images/final_image.png"
           alt="Registration Success"
           className="final_image"
         />

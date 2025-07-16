@@ -7,6 +7,7 @@ import './Add_address.css'
 const Add_address = () => {
 const navigate = useNavigate();
 const handleaddress = () => {
+  
     navigate("/manual")
   }
 
@@ -28,18 +29,23 @@ const handleaddress = () => {
       </div>
 
       <div className="search-address">
-        <div className="search-address-wrapper">
-          
-          <input
-            type="text"
-            placeholder='Search for address'
-            className="search-address-input"
-          />
-          <label className='search-icon-text'></label>
-          <Search size={15} className="search-icon"/>
-        </div>
-        <p className="search-address-text">Your address is not visible to other users</p>
-      </div>
+  <div className="search-address-wrapper">
+    <Search size={15} className="search-icon" />
+    
+    <input
+      type="text"
+      id="address"
+      className="search-address-input"
+      onInput={(e) => e.target.classList.toggle('has-value', e.target.value !== '')}
+    />
+    
+    <label htmlFor="address" className="search-placeholder-label">
+      Search your address
+    </label>
+  </div>
+  <p className="search-address-text"></p>
+</div>
+
 
       <div className="address-options">
         <button className="options">

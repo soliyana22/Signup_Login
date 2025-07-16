@@ -63,55 +63,52 @@ html, body {
   background-color: #f3f4f6;
 }
 
-.search-address {
-  margin-top: 0.5rem;
-}
 .search-address-wrapper {
   position: relative;
-  display: flex;
+  width: 100%;
 }
+
+/* The search icon inside the input */
 .search-icon {
   position: absolute;
-  left: 0px;
-  top: 60%;
+  left: 16px;
+  top: 50%;
   transform: translateY(-50%);
   color: #6b7280;
-  margin-right:10px;
-  
-
-}
-.search-address-wrapper input[placeholder="Search for address"] {
-  margin-left: 1rem;
+  pointer-events: none;
 }
 
-
-.search-icon-text{
-  position: absolute;
-  left: 0px;
-  top: 60%;
-  transform: translateY(-50%);
-  color: #6b7280;
-  margin-right:50px;
-  text-align: center;
-}
+/* Input styling */
 .search-address-input {
   width: 100%;
-  padding:10px;
+  padding: 10px 12px 10px 44px; /* space for icon */
   height: 50px;
   border: 1px solid #d1d5db;
   border-radius: 8px;
   font-size: 1rem;
   background-color: white;
   color: black;
-  
 }
-.search-address-text {
-  color: gray;
-  font-size: small;
 
-  text-align: left;
-  margin-right: 20px;
+/* The label inside the input */
+.search-placeholder-label {
+  position: absolute;
+  left: 44px; /* aligns after the icon */
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9ca3af; /* gray */
+  pointer-events: none;
+  transition: 0.2s ease;
+  font-size: 1rem;
 }
+
+/* When input is focused or has text, hide the label */
+.search-address-input:focus + .search-placeholder-label,
+.search-address-input.has-value + .search-placeholder-label {
+  opacity: 0;
+  visibility: hidden;
+}
+
 
 .address-options {
   display: flex;

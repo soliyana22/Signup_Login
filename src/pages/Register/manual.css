@@ -124,12 +124,37 @@
         .save_btn:hover {
             background-color: #4025b5;
         }
-        .input-group {
+.input-group {
   position: relative;
+  width: 100%;
 }
-.input-group label{
+
+.search-address-input {
+  width: 100%;
+  padding: 16px;
+  font-size: 1rem;
+}
+
+/* Common label styling */
+.floating-label {
   position: absolute;
+  top: 16px;
+  font-size: 1rem;
+  color: #6b7280;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
 }
+
+/* Left label: Apartment */
+.left-label {
+  left: 16px;
+}
+
+/* Right label: Optional */
+.right-label {
+  right: 16px;
+}
+
 
 .search-address-input {
   width: 100%;
@@ -142,22 +167,7 @@
   color: black;
 }
 
-.floating-label {
-  position: absolute;
-  left: 16px;
-  top: 16px;
-  color: #6b7280;
-  font-size: 1rem;
-  pointer-events: none;
-  transition: all 0.2s ease;
-  
-}
-.floating-label .first{
-margin-left:10;
-}
-.floating-label .second{
- margin-right:10
-}
+
 /* When input has focus or something typed inside */
 .search-address-input:focus + .floating-label,
 .search-address-input:not(:placeholder-shown) + .floating-label {

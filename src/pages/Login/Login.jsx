@@ -18,9 +18,8 @@ const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
 
   const isEmailValid = email.includes("@") && email.includes(".");
-  const isPasswordValid = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*]).{8,}$/.test(password);
-
- const handleLogin = async (e) => {
+  const isPasswordValid = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*]).+$/.test(password);
+  const handleLogin = async (e) => {
   e.preventDefault();
   try {
     await signInWithEmailAndPassword(auth, email, password);
