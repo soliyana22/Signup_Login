@@ -7,7 +7,8 @@
 .dashboard-container {
   display: flex;
   width: 100%;
-  min-height: 100vh;
+  min-height: 150vh;
+  margin-top: 20rem;
 }
 .dashboard-wrapper {
   max-width: 306px;
