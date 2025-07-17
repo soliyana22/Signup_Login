@@ -22,6 +22,7 @@ const Customers =()=>{
 
 return(
     <div className="customers-wrapper">
+      
         <div className="user-search">
             <p>Hello Evano 👋🏼,</p>
              <div className="customer-input">
@@ -34,6 +35,7 @@ return(
                                 />
                               </div>
         </div>
+        <div className='customer-container'>
         <div className="earning">
             <div className="total-customers">
                 <div className="total-customers-icon">
@@ -73,13 +75,15 @@ return(
                 </div>
             </div>
         </div>
+        </div>
+
         <div className="product">
             <div className="product-header">
                 <div className="product-header-left">
                     <p>All Customers</p>
                 <p className='active-members'>Active Members</p>
                 </div>
-                
+              
                 <div className="product-header-right">
                         <div className="product-search">
                                                         <i className="bi bi-search"></i>
